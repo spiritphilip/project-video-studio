@@ -9,7 +9,6 @@ jobs:
     runs-on: ubuntu-latest
     env:
       VIDEO_STUDIO_SKIP_LIBRARY: "1"
-      VIDEO_STUDIO_HOME: ${{ runner.temp }}/video-studio-home
     steps:
       - uses: actions/checkout@v4
 
@@ -26,7 +25,9 @@ jobs:
           for f in setup/*.json template/*.json template/scripts/videos/*.json template/youtube/*.json; do node -e "JSON.parse(require('fs').readFileSync('$f','utf8'))" || exit 1; done
 
       - name: Scaffold a demo project
-        run: node scripts/scaffold.mjs --project "$RUNNER_TEMP/demo"
+        run: |
+          export VIDEO_STUDIO_HOME="$RUNNER_TEMP/video-studio-home"
+          node scripts/scaffold.mjs --project "$RUNNER_TEMP/demo"
 
       - name: Install and type-check the kit
         working-directory: ${{ runner.temp }}/demo/videos
