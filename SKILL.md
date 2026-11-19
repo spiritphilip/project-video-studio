@@ -1,7 +1,7 @@
 ---
 name: project-video-studio
 description: Make tutorial, explainer and walkthrough videos for ANY software project. Reads the codebase to understand the product, its users, brand (logo, colours, fonts) and the sound that fits it, runs a first-time setup questionnaire (style - motion explainer, screen tour, animated presenter, real person or AI avatar; format; voice; tone; publishing), then plans the series, writes scripts, captures real app screens, generates free AI voice-over with word-timed captions, builds Remotion videos, renders, makes thumbnails and YouTube SEO. Use whenever the user asks for videos, tutorials, explainers, demos, onboarding clips, promo or YouTube content about the project they are working on.
-version: 2.0.0
+version: 2.0.1
 ---
 
 # Project Video Studio

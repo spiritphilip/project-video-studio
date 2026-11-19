@@ -37,7 +37,7 @@ for (const id of ids) {
   }
   if (!ok) { log(`!! ${id} GAVE UP`); continue; }
   try {
-    execSync(`npx remotion ffmpeg -hide_banner -loglevel error -y -i "${out('raw', `${id}.mp4`)}" -c:v copy -af loudnorm=I=-14:TP=-1.5:LRA=11 -c:a aac -b:a 192k "${final}"`, {cwd: root, stdio: 'inherit'});
+    execSync(`npx remotion ffmpeg -hide_banner -loglevel error -y -i "${out('raw', `${id}.mp4`)}" -c:v copy -af loudnorm=I=-14:TP=-1.5:LRA=11 -c:a aac -b:a 192k -ar 48000 -movflags +faststart "${final}"`, {cwd: root, stdio: 'inherit'});
     log(`== ${id} done → out/final/${id}.mp4 (${(composition.durationInFrames / composition.fps).toFixed(0)}s)`);
   } catch { log(`!! ${id} loudnorm failed (raw render is fine: out/raw/${id}.mp4)`); }
 }

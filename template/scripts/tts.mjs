@@ -67,7 +67,8 @@ async function azure(line, v) {
     const startMs = e.audioOffset / 10000;
     const durMs = e.duration > 100000 ? e.duration / 10000 : e.duration; // ticks in some SDK builds
     const type = String(e.boundaryType);
-    if (/Punctuation/i.test(type)) { if (words.length) words[words.length - 1].text += e.text; return; } // keep "money." for captions
+    // keep "money." for captions; only the leading punctuation (after a <break> Azure can send the rest of the sentence here)
+    if (/Punctuation/i.test(type)) { const p = (e.text.match(/^[^\p{L}\p{N}\s]+/u) || [''])[0]; if (words.length && p) words[words.length - 1].text += p; return; }
     if (/Sentence/i.test(type)) return;
     words.push({text: e.text, startMs: Math.round(startMs), endMs: Math.round(startMs + durMs)});
   };

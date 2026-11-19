@@ -1,5 +1,9 @@
 # Changelog
 
+## 2.0.1 (2026-11-19)
+- **Fix (Azure voices):** after a `[pause]`, Azure can send the rest of the sentence in a punctuation event, and `tts.mjs` glued it all onto the previous word (one giant caption word, then the same words repeated). Now only the leading punctuation is kept. Update existing projects with `sync-kit.mjs`, then re-voice affected lines with `--force`.
+- **Fix (render):** the loudness pass left the audio at 96 kHz, which some social apps handle badly. Final videos are now 48 kHz AAC with `+faststart` (plays before it fully downloads).
+
 ## 2.0.0 (2026-11-19): open-source release
 - **Open source** under MIT. Proper README, CONTRIBUTING, LICENSE, docs/using-with-agents.md, docs/requirements.md.
 - **Works with any coding agent** (Claude Code, Codex CLI, Gemini CLI, Cursor, Cline/Roo, OpenCode, Aider, Windsurf) and **without an agent**: `scripts/setup.mjs` terminal wizard. SKILL.md is agent-agnostic (multiple-choice tool if available, numbered questions in chat otherwise).
