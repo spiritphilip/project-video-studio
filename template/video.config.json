@@ -1,0 +1,80 @@
+{
+  "_note": "Written by the first-run setup questionnaire. Edit freely, then run `npm run brand` to regenerate src/brand.ts.",
+  "skillVersion": "1.0.0",
+  "questionsVersion": 1,
+  "project": {
+    "name": "My Project",
+    "summary": "One sentence: what the product does and for whom.",
+    "url": "https://example.com",
+    "repoRoot": ".."
+  },
+  "brand": {
+    "name": "My Project",
+    "wordmark": "MYPROJECT",
+    "tagline": "What the product promises, in one line.",
+    "pillars": ["Feature one", "Feature two", "Feature three"],
+    "poweredBy": null,
+    "logo": "brand/logo.png",
+    "mark": null,
+    "colors": {
+      "bg": "#0b1020",
+      "surface": "#141a2e",
+      "card": "#1d2540",
+      "primary": "#6366f1",
+      "secondary": "#22d3ee",
+      "accent": "#f472b6",
+      "text": "#ffffff",
+      "muted": "rgba(255,255,255,0.68)",
+      "line": "rgba(255,255,255,0.12)",
+      "success": "#34d399",
+      "danger": "#f87171",
+      "highlight": "#facc15"
+    },
+    "fonts": {
+      "head": {"family": "Unbounded", "weights": ["600", "800"]},
+      "display": {"family": "Space Grotesk", "weights": ["500", "700"]},
+      "body": {"family": "Outfit", "weights": ["400", "500", "600"]}
+    }
+  },
+  "answers": {
+    "goal": "role-tutorials",
+    "audience": "end-users",
+    "format": "16:9",
+    "length": "60-90s",
+    "style": "motion-explainer",
+    "visuals": ["app-screens", "icons-motion", "stock-footage"],
+    "captions": "word-highlight",
+    "energy": "energetic",
+    "voiceProvider": "azure",
+    "accent": "en-US",
+    "cast": "per-track",
+    "tone": "formal-simple",
+    "destinations": ["youtube"],
+    "bumpers": "intro-outro",
+    "music": "upbeat",
+    "approval": "script-each"
+  },
+  "presenter": {
+    "type": "character",
+    "skin": "#8d5524",
+    "hair": "#1b1b1b",
+    "hairStyle": "short",
+    "outfit": "#6366f1",
+    "position": "right"
+  },
+  "voices": {
+    "narrator": {"provider": "azure", "name": "en-US-AndrewMultilingualNeural", "lang": "en-US", "rate": "+8%", "pitch": "+3%"},
+    "second": {"provider": "azure", "name": "en-US-AvaMultilingualNeural", "lang": "en-US", "rate": "+8%", "pitch": "+4%"}
+  },
+  "tracks": {
+    "start": {"name": "Start here", "narrator": "narrator", "color": "#6366f1"}
+  },
+  "music": {"default": "driving-ambition", "volume": 0.085},
+  "publish": {
+    "site": "https://example.com",
+    "seriesName": "My Project Academy",
+    "baseTags": ["My Project", "tutorial"],
+    "hashtags": ["#MyProject"],
+    "trackLinks": {}
+  }
+}

@@ -1,0 +1,9 @@
+node_modules
+.env
+secrets.env
+*.local.*
+template/node_modules
+template/out
+template/public/vo
+template/public/stock/*.mp4
+template/public/audio/**/*.mp3

@@ -1,0 +1,35 @@
+{
+  "_note": "Files the kit expects in ~/.video-studio/library (Mixkit, not redistributable). Re-download from mixkit.co under these names.",
+  "music": [
+    "dreaming-big.mp3",
+    "driving-ambition.mp3",
+    "games-worldbeat.mp3",
+    "lets-play-africa.mp3"
+  ],
+  "sfx": [
+    "coin-win.mp3",
+    "coins-clink.mp3",
+    "intro-impact.mp3",
+    "logo-impact.mp3",
+    "message.mp3",
+    "pop-bubble.mp3",
+    "pop-click.mp3",
+    "pop-explainer.mp3",
+    "quick-zoom.mp3",
+    "riser-short.mp3",
+    "riser-synth.mp3",
+    "sparkle.mp3",
+    "success.mp3",
+    "tile-hit.mp3",
+    "unlock.mp3",
+    "whoosh-air.mp3",
+    "whoosh-fast.mp3"
+  ],
+  "stock": [
+    "hand-phone-black.mp4",
+    "mixkit-17450.mp4",
+    "mixkit-46627.mp4",
+    "mixkit-49247.mp4",
+    "typing-phone.mp4"
+  ]
+}

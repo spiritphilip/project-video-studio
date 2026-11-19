@@ -1,0 +1,10 @@
+{
+  "baseUrl": "http://localhost:3000",
+  "colorScheme": "dark",
+  "auth": {},
+  "hide": [],
+  "shots": [
+    {"name": "landing-desktop", "path": "/", "device": "desktop"},
+    {"name": "landing-mobile", "path": "/", "device": "mobile"}
+  ]
+}

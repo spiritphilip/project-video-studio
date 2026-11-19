@@ -1,0 +1,13 @@
+[
+  {
+    "id": "M1-GetStarted",
+    "track": "start",
+    "ep": "Episode 1",
+    "privacy": "public",
+    "title": "How to Get Started with My Project in 60 Seconds",
+    "hook": "New to My Project? This one-minute guide shows you exactly how to sign in, set up and start.",
+    "points": ["Sign in with your email and a 6-digit code", "Set up your profile and pick a plan", "Invite your team"],
+    "tags": ["how to use my project", "my project tutorial", "getting started"],
+    "chapters": [["0:00", "Intro"], ["0:06", "Sign in"], ["0:20", "Three steps"], ["0:35", "Your dashboard"]]
+  }
+]

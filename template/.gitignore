@@ -1,0 +1,14 @@
+node_modules
+dist
+.DS_Store
+.env
+# renders
+out
+# licensed media (Mixkit etc.): fetched from ~/.video-studio/library, not committed
+public/stock/*.mp4
+public/audio/music/*.mp3
+public/audio/sfx/*.mp3
+# generated voiceovers (re-create with scripts/tts.mjs)
+public/vo/
+# login state for screen capture
+auth/

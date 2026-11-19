@@ -1,0 +1,47 @@
+{
+  "name": "project-videos",
+  "version": "1.0.0",
+  "description": "Tutorial and explainer videos for this project (made with project-video-studio)",
+  "license": "UNLICENSED",
+  "private": true,
+  "engines": {
+    "node": "^20.19.0 || ^22.13.0 || >=24"
+  },
+  "dependencies": {
+    "@remotion/captions": "4.0.543",
+    "@remotion/cli": "4.0.543",
+    "@remotion/google-fonts": "4.0.543",
+    "@remotion/layout-utils": "4.0.543",
+    "@remotion/media": "4.0.543",
+    "@remotion/media-utils": "4.0.543",
+    "@remotion/paths": "4.0.543",
+    "@remotion/transitions": "4.0.543",
+    "react": "19.3.1",
+    "react-dom": "19.3.1",
+    "remotion": "4.0.543"
+  },
+  "devDependencies": {
+    "@remotion/eslint-config-flat": "4.0.543",
+    "@types/react": "19.3.0",
+    "@types/web": "0.0.166",
+    "eslint": "10.12.0",
+    "microsoft-cognitiveservices-speech-sdk": "^1.53.0",
+    "prettier": "3.8.1",
+    "typescript": "5.9.3"
+  },
+  "scripts": {
+    "dev": "remotion studio",
+    "brand": "node scripts/brand.mjs",
+    "fonts": "node scripts/fonts.mjs && node scripts/brand.mjs",
+    "voice": "node scripts/tts.mjs",
+    "capture": "node scripts/capture.mjs",
+    "stills": "node scripts/stills.mjs",
+    "render": "node scripts/render.mjs",
+    "thumbs": "node scripts/thumbs.mjs",
+    "seo": "node scripts/seo.mjs",
+    "lint": "eslint src && tsc"
+  },
+  "allowScripts": {
+    "esbuild": false
+  }
+}

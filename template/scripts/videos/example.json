@@ -1,0 +1,12 @@
+{
+ "id": "example",
+ "title": "Start here · How it works",
+ "for": "New users",
+ "lines": [
+  {"id": "hook", "voice": "narrator", "text": "New here? In one minute, you will know exactly how to get started."},
+  {"id": "signin", "voice": "narrator", "text": "First, sign in with your email. [pause 200] You will get a six-digit code. Type it in, and you are in."},
+  {"id": "steps", "voice": "narrator", "text": "Then follow three simple steps: set up your profile, pick your plan, and invite your team."},
+  {"id": "tour", "voice": "narrator", "text": "Your dashboard shows everything in one place. Tap *New project* to begin."},
+  {"id": "close", "voice": "narrator", "text": "That's it. You are ready. Let's build something great."}
+ ]
+}
