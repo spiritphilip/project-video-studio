@@ -1,0 +1,22 @@
+{
+  "_how": "Default narrator + second voice per accent. Same names work for the free `edge` provider and for `azure`. Energy from the setup answer sets rate/pitch. ElevenLabs needs the user's own voiceId.",
+  "energy": {
+    "energetic": {"rate": "+10%", "pitch": "+4%"},
+    "calm": {"rate": "+0%", "pitch": "+0%"},
+    "playful": {"rate": "+12%", "pitch": "+6%"}
+  },
+  "accents": {
+    "en-US": {"lang": "en-US", "narrator": "en-US-AndrewMultilingualNeural", "second": "en-US-AvaMultilingualNeural"},
+    "en-GB": {"lang": "en-GB", "narrator": "en-GB-RyanNeural", "second": "en-GB-SoniaNeural"},
+    "en-NG": {"lang": "en-NG", "narrator": "en-NG-AbeoNeural", "second": "en-NG-EzinneNeural"},
+    "en-KE": {"lang": "en-KE", "narrator": "en-KE-ChilembaNeural", "second": "en-KE-AsiliaNeural"},
+    "en-ZA": {"lang": "en-ZA", "narrator": "en-ZA-LukeNeural", "second": "en-ZA-LeahNeural"},
+    "en-IN": {"lang": "en-IN", "narrator": "en-IN-PrabhatNeural", "second": "en-IN-NeerjaNeural"},
+    "en-AU": {"lang": "en-AU", "narrator": "en-AU-WilliamNeural", "second": "en-AU-NatashaNeural"},
+    "fr-FR": {"lang": "fr-FR", "narrator": "fr-FR-HenriNeural", "second": "fr-FR-DeniseNeural"},
+    "es-ES": {"lang": "es-ES", "narrator": "es-ES-AlvaroNeural", "second": "es-ES-ElviraNeural"},
+    "pt-BR": {"lang": "pt-BR", "narrator": "pt-BR-AntonioNeural", "second": "pt-BR-FranciscaNeural"},
+    "de-DE": {"lang": "de-DE", "narrator": "de-DE-ConradNeural", "second": "de-DE-KatjaNeural"}
+  },
+  "elevenlabs": {"_note": "Pick voices in the ElevenLabs Voice Library and paste their IDs.", "narrator": {"provider": "elevenlabs", "voiceId": "", "model": "eleven_multilingual_v2", "speed": 1.05}}
+}

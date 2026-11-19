@@ -1,119 +1,461 @@
 {
   "_how": "First-run questionnaire. Ask each round with ONE AskUserQuestion call (max 4 questions per call, 2-4 options each; 'Other' is added automatically). Before asking, pre-select the option the project itself suggests and put it first with '(Recommended)'. Store answers in <videos>/video.config.json → answers[key]. To extend: add a question (new key) or an option, then bump `version` — projects with an older questionsVersion get asked ONLY the new keys.",
-  "version": 1,
+  "version": 2,
   "rounds": [
     {
       "title": "Purpose",
       "questions": [
-        {"key": "goal", "header": "Goal", "question": "What are these videos mainly for?", "multiSelect": false, "options": [
-          {"value": "role-tutorials", "label": "Tutorials by role", "description": "A series per user type (e.g. member, admin): how to use every part of the product."},
-          {"value": "explainer", "label": "Product explainer", "description": "One or a few videos: what the product is, why it matters, how it works. Good for the homepage and ads."},
-          {"value": "feature-updates", "label": "Feature walkthroughs", "description": "One short video per feature or release, shipped as features land."},
-          {"value": "onboarding", "label": "In-app onboarding", "description": "Short clips embedded in the product's own screens and empty states."}
-        ]},
-        {"key": "audience", "header": "Audience", "question": "Who will watch them?", "multiSelect": false, "options": [
-          {"value": "end-users", "label": "End users / customers", "description": "People using the product day to day. Plain words, no jargon."},
-          {"value": "staff", "label": "Staff / admins", "description": "Internal team running the product. Can be more detailed; may be unlisted."},
-          {"value": "prospects", "label": "Prospects / investors", "description": "People deciding whether to use or back it. Outcome-led, persuasive."},
-          {"value": "developers", "label": "Developers", "description": "Technical audience: APIs, setup, integration."}
-        ]},
-        {"key": "format", "header": "Format", "question": "Which shape should the videos be?", "multiSelect": false, "options": [
-          {"value": "16:9", "label": "Landscape 16:9", "description": "YouTube, websites, presentations. 1920×1080."},
-          {"value": "9:16", "label": "Vertical 9:16", "description": "Shorts, Reels, TikTok, WhatsApp status. 1080×1920."},
-          {"value": "both", "label": "Both", "description": "Landscape main videos plus vertical cut-downs of the key moments."},
-          {"value": "1:1", "label": "Square 1:1", "description": "Feeds (LinkedIn, Instagram, X). 1080×1080."}
-        ]},
-        {"key": "length", "header": "Length", "question": "How long should each video be?", "multiSelect": false, "options": [
-          {"value": "60-90s", "label": "60–90 seconds", "description": "One topic per video. Best for tutorials and retention."},
-          {"value": "under-45s", "label": "Under 45 seconds", "description": "Snackable: Shorts, ads, in-app tips."},
-          {"value": "2-4min", "label": "2–4 minutes", "description": "Deeper walkthroughs that cover a full flow end to end."}
-        ]}
+        {
+          "key": "goal",
+          "header": "Goal",
+          "question": "What are these videos mainly for?",
+          "multiSelect": false,
+          "options": [
+            {
+              "value": "role-tutorials",
+              "label": "Tutorials by role",
+              "description": "A series per user type (e.g. member, admin): how to use every part of the product."
+            },
+            {
+              "value": "explainer",
+              "label": "Product explainer",
+              "description": "One or a few videos: what the product is, why it matters, how it works. Good for the homepage and ads."
+            },
+            {
+              "value": "feature-updates",
+              "label": "Feature walkthroughs",
+              "description": "One short video per feature or release, shipped as features land."
+            },
+            {
+              "value": "onboarding",
+              "label": "In-app onboarding",
+              "description": "Short clips embedded in the product's own screens and empty states."
+            }
+          ]
+        },
+        {
+          "key": "audience",
+          "header": "Audience",
+          "question": "Who will watch them?",
+          "multiSelect": false,
+          "options": [
+            {
+              "value": "end-users",
+              "label": "End users / customers",
+              "description": "People using the product day to day. Plain words, no jargon."
+            },
+            {
+              "value": "staff",
+              "label": "Staff / admins",
+              "description": "Internal team running the product. Can be more detailed; may be unlisted."
+            },
+            {
+              "value": "prospects",
+              "label": "Prospects / investors",
+              "description": "People deciding whether to use or back it. Outcome-led, persuasive."
+            },
+            {
+              "value": "developers",
+              "label": "Developers",
+              "description": "Technical audience: APIs, setup, integration."
+            }
+          ]
+        },
+        {
+          "key": "format",
+          "header": "Format",
+          "question": "Which shape should the videos be?",
+          "multiSelect": false,
+          "options": [
+            {
+              "value": "16:9",
+              "label": "Landscape 16:9",
+              "description": "YouTube, websites, presentations. 1920×1080."
+            },
+            {
+              "value": "9:16",
+              "label": "Vertical 9:16",
+              "description": "Shorts, Reels, TikTok, WhatsApp status. 1080×1920."
+            },
+            {
+              "value": "both",
+              "label": "Both",
+              "description": "Landscape main videos plus vertical cut-downs of the key moments."
+            },
+            {
+              "value": "1:1",
+              "label": "Square 1:1",
+              "description": "Feeds (LinkedIn, Instagram, X). 1080×1080."
+            }
+          ]
+        },
+        {
+          "key": "length",
+          "header": "Length",
+          "question": "How long should each video be?",
+          "multiSelect": false,
+          "options": [
+            {
+              "value": "60-90s",
+              "label": "60–90 seconds",
+              "description": "One topic per video. Best for tutorials and retention."
+            },
+            {
+              "value": "under-45s",
+              "label": "Under 45 seconds",
+              "description": "Snackable: Shorts, ads, in-app tips."
+            },
+            {
+              "value": "2-4min",
+              "label": "2–4 minutes",
+              "description": "Deeper walkthroughs that cover a full flow end to end."
+            }
+          ]
+        }
       ]
     },
     {
       "title": "Look",
       "questions": [
-        {"key": "style", "header": "Style", "question": "Which video style?", "multiSelect": false, "options": [
-          {"value": "motion-explainer", "label": "Motion explainer", "description": "Animated scenes, 3D icons, kinetic text and app screens in device frames, with a voice-over. The proven default.", "preview": "┌──────────────────────────────┐\n│  ✦  Three *simple* steps     │\n│                              │\n│ [🔧 Profile] [🏅 Plan] [💬 Team]│\n│                              │\n│ ▸ captions, word by word ◂   │\n└──────────────────────────────┘"},
-          {"value": "screen-tour", "label": "Screen tour", "description": "Real product screens with a cursor, zooms and spotlights on each button. Best for 'how do I…' tutorials.", "preview": "┌──────────────────────────────┐\n│ app.example.com/dashboard    │\n│ ┌────────────┐               │\n│ │ ░░░░░░░░░░ │  ┌──────────┐ │\n│ │ ░░░░░░░░░░ │  │New proj ↖│ │\n│ └────────────┘  └──────────┘ │\n│   (zoom + spotlight + click) │\n└──────────────────────────────┘"},
-          {"value": "presenter-character", "label": "Animated presenter", "description": "A cartoon host stands beside the content, lip-syncs to the voice and points at what it explains.", "preview": "┌──────────────────────────────┐\n│  Your wallet is made  │  (•‿•)│\n│  *for you*            │  /|\\ ☞│\n│  [✓ No seed phrase]   │  / \\  │\n└──────────────────────────────┘"},
-          {"value": "real-presenter", "label": "Real person / AI avatar", "description": "You (recorded on camera) or an AI avatar (HeyGen / D-ID) talks in a bubble or side panel over the screens.", "preview": "┌──────────────────────────────┐\n│ ┌────────────────┐           │\n│ │  app screen    │    ╭───╮  │\n│ │                │    │ 🙂 │  │\n│ └────────────────┘    ╰───╯  │\n└──────────────────────────────┘"}
-        ]},
-        {"key": "visuals", "header": "Visual mix", "question": "What should appear on screen? (pick all that fit)", "multiSelect": true, "options": [
-          {"value": "app-screens", "label": "Real app screens", "description": "Captured from the running product, signed in as the right role. Always matches the narration."},
-          {"value": "icons-motion", "label": "3D icons + motion", "description": "Animated concept scenes: cards, counters, checklists, flows."},
-          {"value": "stock-footage", "label": "Stock / own footage", "description": "Real-world clips (Mixkit free library or your own event footage) for hooks and emotion."},
-          {"value": "photos", "label": "Photos", "description": "Your own photos (team, events, customers) as montages and backgrounds."}
-        ]},
-        {"key": "energy", "header": "Energy", "question": "How should it feel?", "multiSelect": false, "options": [
-          {"value": "energetic", "label": "Energetic", "description": "Faster voice (+8–12%), punchy transitions, sound effects on every beat."},
-          {"value": "calm", "label": "Calm & clear", "description": "Natural pace, soft fades, light sound design. Good for finance, health, B2B."},
-          {"value": "playful", "label": "Playful", "description": "Bouncy motion, bright colour pops, jokes allowed. Good for young audiences."}
-        ]},
-        {"key": "captions", "header": "Captions", "question": "Burned-in captions?", "multiSelect": false, "options": [
-          {"value": "word-highlight", "label": "Word highlight", "description": "Short caption pages, the spoken word lights up in the brand colour (most watched on mute)."},
-          {"value": "subtle", "label": "Subtle", "description": "Plain white captions, no highlight."},
-          {"value": "none", "label": "None", "description": "No burned-in captions (upload an .srt to YouTube instead)."}
-        ]}
+        {
+          "key": "style",
+          "header": "Style",
+          "question": "Which video style?",
+          "multiSelect": false,
+          "options": [
+            {
+              "value": "motion-explainer",
+              "label": "Motion explainer",
+              "description": "Animated scenes, 3D icons, kinetic text and app screens in device frames, with a voice-over. The proven default.",
+              "preview": "┌──────────────────────────────┐\n│  ✦  Three *simple* steps     │\n│                              │\n│ [🔧 Profile] [🏅 Plan] [💬 Team]│\n│                              │\n│ ▸ captions, word by word ◂   │\n└──────────────────────────────┘"
+            },
+            {
+              "value": "screen-tour",
+              "label": "Screen tour",
+              "description": "Real product screens with a cursor, zooms and spotlights on each button. Best for 'how do I…' tutorials.",
+              "preview": "┌──────────────────────────────┐\n│ app.example.com/dashboard    │\n│ ┌────────────┐               │\n│ │ ░░░░░░░░░░ │  ┌──────────┐ │\n│ │ ░░░░░░░░░░ │  │New proj ↖│ │\n│ └────────────┘  └──────────┘ │\n│   (zoom + spotlight + click) │\n└──────────────────────────────┘"
+            },
+            {
+              "value": "presenter-character",
+              "label": "Animated presenter",
+              "description": "A cartoon host stands beside the content, lip-syncs to the voice and points at what it explains.",
+              "preview": "┌──────────────────────────────┐\n│  Your wallet is made  │  (•‿•)│\n│  *for you*            │  /|\\ ☞│\n│  [✓ No seed phrase]   │  / \\  │\n└──────────────────────────────┘"
+            },
+            {
+              "value": "real-presenter",
+              "label": "Real person / AI avatar",
+              "description": "You (recorded on camera) or an AI avatar (HeyGen / D-ID) talks in a bubble or side panel over the screens.",
+              "preview": "┌──────────────────────────────┐\n│ ┌────────────────┐           │\n│ │  app screen    │    ╭───╮  │\n│ │                │    │ 🙂 │  │\n│ └────────────────┘    ╰───╯  │\n└──────────────────────────────┘"
+            }
+          ]
+        },
+        {
+          "key": "visuals",
+          "header": "Visual mix",
+          "question": "What should appear on screen? (pick all that fit)",
+          "multiSelect": true,
+          "options": [
+            {
+              "value": "app-screens",
+              "label": "Real app screens",
+              "description": "Captured from the running product, signed in as the right role. Always matches the narration."
+            },
+            {
+              "value": "icons-motion",
+              "label": "3D icons + motion",
+              "description": "Animated concept scenes: cards, counters, checklists, flows."
+            },
+            {
+              "value": "stock-footage",
+              "label": "Stock / own footage",
+              "description": "Real-world clips (free Pexels/Pixabay stock with a free key, or your own footage) for hooks and emotion."
+            },
+            {
+              "value": "photos",
+              "label": "Photos",
+              "description": "Your own photos (team, events, customers) as montages and backgrounds."
+            }
+          ]
+        },
+        {
+          "key": "energy",
+          "header": "Energy",
+          "question": "How should it feel?",
+          "multiSelect": false,
+          "options": [
+            {
+              "value": "energetic",
+              "label": "Energetic",
+              "description": "Faster voice (+8–12%), punchy transitions, sound effects on every beat."
+            },
+            {
+              "value": "calm",
+              "label": "Calm & clear",
+              "description": "Natural pace, soft fades, light sound design. Good for finance, health, B2B."
+            },
+            {
+              "value": "playful",
+              "label": "Playful",
+              "description": "Bouncy motion, bright colour pops, jokes allowed. Good for young audiences."
+            }
+          ]
+        },
+        {
+          "key": "captions",
+          "header": "Captions",
+          "question": "Burned-in captions?",
+          "multiSelect": false,
+          "options": [
+            {
+              "value": "word-highlight",
+              "label": "Word highlight",
+              "description": "Short caption pages, the spoken word lights up in the brand colour (most watched on mute)."
+            },
+            {
+              "value": "subtle",
+              "label": "Subtle",
+              "description": "Plain white captions, no highlight."
+            },
+            {
+              "value": "none",
+              "label": "None",
+              "description": "No burned-in captions (upload an .srt to YouTube instead)."
+            }
+          ]
+        }
       ]
     },
     {
       "title": "Voice",
       "questions": [
-        {"key": "voiceProvider", "header": "Voice", "question": "Who does the voice-over?", "multiSelect": false, "options": [
-          {"value": "azure", "label": "Azure neural voices", "description": "Free tier is enough (0.5M chars/month). Many accents incl. Nigerian, Kenyan, US, UK, Indian. Key already saved on this PC."},
-          {"value": "elevenlabs", "label": "ElevenLabs", "description": "Most natural and expressive; paid; needs ELEVENLABS_API_KEY."},
-          {"value": "recorded", "label": "My own voice", "description": "You record each line (phone is fine); timings come from a transcription."},
-          {"value": "none", "label": "No voice", "description": "Music + on-screen text only (kinetic typography)."}
-        ]},
-        {"key": "accent", "header": "Accent", "question": "Which accent / language should the voices have?", "multiSelect": false, "options": [
-          {"value": "en-US", "label": "American English", "description": "e.g. Azure en-US-AndrewMultilingualNeural / AvaMultilingualNeural."},
-          {"value": "en-GB", "label": "British English", "description": "e.g. Azure en-GB-RyanNeural / SoniaNeural."},
-          {"value": "en-NG", "label": "Nigerian English", "description": "Azure en-NG-AbeoNeural / EzinneNeural (+ en-KE Chilemba / Asilia as a second pair)."},
-          {"value": "other", "label": "Other language", "description": "Tell me the language/region; I'll list matching voices to audition."}
-        ]},
-        {"key": "cast", "header": "Cast", "question": "How many voices?", "multiSelect": false, "options": [
-          {"value": "single", "label": "One narrator", "description": "Same voice on every video. Simple and consistent."},
-          {"value": "per-track", "label": "One per series", "description": "Each audience/track gets its own narrator (e.g. members vs admins)."},
-          {"value": "dialogue", "label": "Narrator + dialogue", "description": "Main narrator plus two-voice role-play scenes (e.g. a buyer and a seller)."}
-        ]},
-        {"key": "tone", "header": "Tone", "question": "How should the scripts sound?", "multiSelect": false, "options": [
-          {"value": "formal-simple", "label": "Formal but simple", "description": "Short sentences, plain words, no slang. Works for every audience."},
-          {"value": "friendly", "label": "Friendly & casual", "description": "Conversational, 'you'll love this', light humour."},
-          {"value": "professional", "label": "Professional", "description": "Corporate/B2B, precise, outcome-focused."}
-        ]}
+        {
+          "key": "voiceProvider",
+          "header": "Voice",
+          "question": "Who does the voice-over? (type \"No voice\" under Other for music + on-screen text only)",
+          "multiSelect": false,
+          "options": [
+            {
+              "value": "edge",
+              "label": "Free neural voices (no key)",
+              "description": "Microsoft Edge neural voices through the open-source edge-tts tool: no account, no key, the same voices as Azure (needs Python). Word-timed captions included."
+            },
+            {
+              "value": "azure",
+              "label": "Azure Speech (free tier key)",
+              "description": "Official Azure neural voices; the free F0 tier (0.5M chars/month) is enough. Needs AZURE_SPEECH_KEY + AZURE_SPEECH_REGION."
+            },
+            {
+              "value": "elevenlabs",
+              "label": "ElevenLabs",
+              "description": "Most natural and expressive; paid; needs ELEVENLABS_API_KEY."
+            },
+            {
+              "value": "recorded",
+              "label": "My own voice",
+              "description": "You record each line (phone is fine); timings come from a transcription."
+            }
+          ]
+        },
+        {
+          "key": "accent",
+          "header": "Accent",
+          "question": "Which accent / language should the voices have?",
+          "multiSelect": false,
+          "options": [
+            {
+              "value": "en-US",
+              "label": "American English",
+              "description": "e.g. en-US-AndrewMultilingualNeural / AvaMultilingualNeural."
+            },
+            {
+              "value": "en-GB",
+              "label": "British English",
+              "description": "e.g. en-GB-RyanNeural / SoniaNeural."
+            },
+            {
+              "value": "en-NG",
+              "label": "Nigerian English",
+              "description": "en-NG-AbeoNeural / EzinneNeural (+ en-KE Chilemba / Asilia as a second pair)."
+            },
+            {
+              "value": "other",
+              "label": "Other language",
+              "description": "Tell me the language/region; I'll list matching voices to audition."
+            }
+          ]
+        },
+        {
+          "key": "cast",
+          "header": "Cast",
+          "question": "How many voices?",
+          "multiSelect": false,
+          "options": [
+            {
+              "value": "single",
+              "label": "One narrator",
+              "description": "Same voice on every video. Simple and consistent."
+            },
+            {
+              "value": "per-track",
+              "label": "One per series",
+              "description": "Each audience/track gets its own narrator (e.g. members vs admins)."
+            },
+            {
+              "value": "dialogue",
+              "label": "Narrator + dialogue",
+              "description": "Main narrator plus two-voice role-play scenes (e.g. a buyer and a seller)."
+            }
+          ]
+        },
+        {
+          "key": "tone",
+          "header": "Tone",
+          "question": "How should the scripts sound?",
+          "multiSelect": false,
+          "options": [
+            {
+              "value": "formal-simple",
+              "label": "Formal but simple",
+              "description": "Short sentences, plain words, no slang. Works for every audience."
+            },
+            {
+              "value": "friendly",
+              "label": "Friendly & casual",
+              "description": "Conversational, 'you'll love this', light humour."
+            },
+            {
+              "value": "professional",
+              "label": "Professional",
+              "description": "Corporate/B2B, precise, outcome-focused."
+            }
+          ]
+        }
       ]
     },
     {
       "title": "Ship",
       "questions": [
-        {"key": "destinations", "header": "Publish to", "question": "Where will the videos go? (pick all)", "multiSelect": true, "options": [
-          {"value": "youtube", "label": "YouTube", "description": "Full SEO pack: titles, descriptions, chapters, tags, thumbnails, playlists (vidIQ connector or Studio)."},
-          {"value": "in-product", "label": "Inside the product/site", "description": "Embedded in the app or docs (YouTube embed or self-hosted MP4)."},
-          {"value": "social", "label": "Social", "description": "Vertical cut-downs for Shorts / Reels / TikTok / LinkedIn."},
-          {"value": "local", "label": "Just the files", "description": "MP4s in out/final; I'll handle distribution."}
-        ]},
-        {"key": "bumpers", "header": "Branding", "question": "Brand intro/outro on every video?", "multiSelect": false, "options": [
-          {"value": "intro-outro", "label": "Intro + outro", "description": "5.5s logo-tile intro with the episode title, 7s logo signature outro with tagline + URL."},
-          {"value": "intro-only", "label": "Intro only", "description": "Title intro, no outro (shorter)."},
-          {"value": "none", "label": "None", "description": "Straight in (best for Shorts and in-app clips); logo bug stays in the corner."}
-        ]},
-        {"key": "music", "header": "Music", "question": "Background music?", "multiSelect": false, "options": [
-          {"value": "upbeat", "label": "Upbeat", "description": "Driving, positive bed (Mixkit free library on this PC), ducked under speech."},
-          {"value": "calm", "label": "Calm", "description": "Soft ambient bed."},
-          {"value": "none", "label": "None", "description": "Voice and sound effects only."}
-        ]},
-        {"key": "approval", "header": "Approvals", "question": "How much do you want to review?", "multiSelect": false, "options": [
-          {"value": "script-each", "label": "Approve each script", "description": "I write every script, you approve it, then I build. Plus a stills check before each render."},
-          {"value": "batch", "label": "Approve per batch", "description": "Approve the video list + all scripts of a batch at once, then I build the batch."},
-          {"value": "autopilot", "label": "Autopilot", "description": "I plan, script, build and render; you review the finished videos."}
-        ]}
+        {
+          "key": "destinations",
+          "header": "Publish to",
+          "question": "Where will the videos go? (pick all)",
+          "multiSelect": true,
+          "options": [
+            {
+              "value": "youtube",
+              "label": "YouTube",
+              "description": "Full SEO pack: titles, descriptions, chapters, tags, thumbnails, playlists (vidIQ connector or Studio)."
+            },
+            {
+              "value": "in-product",
+              "label": "Inside the product/site",
+              "description": "Embedded in the app or docs (YouTube embed or self-hosted MP4)."
+            },
+            {
+              "value": "social",
+              "label": "Social",
+              "description": "Vertical cut-downs for Shorts / Reels / TikTok / LinkedIn."
+            },
+            {
+              "value": "local",
+              "label": "Just the files",
+              "description": "MP4s in out/final; I'll handle distribution."
+            }
+          ]
+        },
+        {
+          "key": "bumpers",
+          "header": "Branding",
+          "question": "Brand intro/outro on every video?",
+          "multiSelect": false,
+          "options": [
+            {
+              "value": "intro-outro",
+              "label": "Intro + outro",
+              "description": "5.5s logo-tile intro with the episode title, 7s logo signature outro with tagline + URL."
+            },
+            {
+              "value": "intro-only",
+              "label": "Intro only",
+              "description": "Title intro, no outro (shorter)."
+            },
+            {
+              "value": "none",
+              "label": "None",
+              "description": "Straight in (best for Shorts and in-app clips); logo bug stays in the corner."
+            }
+          ]
+        },
+        {
+          "key": "music",
+          "header": "Music",
+          "question": "Background music? (picked to fit this project's sound brief)",
+          "multiSelect": false,
+          "options": [
+            {
+              "value": "upbeat",
+              "label": "Upbeat",
+              "description": "Driving, positive bed matched to the project's sound brief, fetched from free open sources (Openverse CC0/CC-BY, Freesound); ducked under speech. Credits are added to descriptions automatically."
+            },
+            {
+              "value": "calm",
+              "label": "Calm",
+              "description": "Soft ambient/piano bed from free open sources, chosen to fit the project; credits handled automatically."
+            },
+            {
+              "value": "playful",
+              "label": "Playful",
+              "description": "Bouncy, light bed (ukulele, whistle, pizzicato) from free open sources; credits handled automatically."
+            },
+            {
+              "value": "none",
+              "label": "None",
+              "description": "Voice and sound effects only."
+            }
+          ]
+        },
+        {
+          "key": "approval",
+          "header": "Approvals",
+          "question": "How much do you want to review?",
+          "multiSelect": false,
+          "options": [
+            {
+              "value": "script-each",
+              "label": "Approve each script",
+              "description": "I write every script, you approve it, then I build. Plus a stills check before each render."
+            },
+            {
+              "value": "batch",
+              "label": "Approve per batch",
+              "description": "Approve the video list + all scripts of a batch at once, then I build the batch."
+            },
+            {
+              "value": "autopilot",
+              "label": "Autopilot",
+              "description": "I plan, script, build and render; you review the finished videos."
+            }
+          ]
+        }
       ]
     }
   ],
   "followUps": {
-    "presenter-character": {"header": "Presenter", "question": "What should the presenter look like?", "note": "Render the PresenterDemo composition as a still and show it; ask skin tone, hair style (short | afro | bun | long | bald), outfit colour (default brand primary), side (left | right). Save to video.config.json → presenter."},
-    "real-presenter": {"header": "Presenter", "question": "Real person or AI avatar?", "note": "Options: 'I'll record myself' (clips in public/presenter/, layout bubble | side | full) or 'AI avatar' (HeyGen / D-ID: needs HEYGEN_API_KEY or DID_API_KEY in ~/.video-studio/secrets.env; generate one clip per line from the script, then place with <TalkingHead>)."},
-    "accent:other": {"header": "Language", "question": "Which language and region?", "note": "List 4–6 matching Azure voices (or ElevenLabs voices), render a 1-line sample of each to out/voice-samples/, and let the user rank them."}
-  }
+    "presenter-character": {
+      "header": "Presenter",
+      "question": "What should the presenter look like?",
+      "note": "Render the PresenterDemo composition as a still and show it; ask skin tone, hair style (short | afro | bun | long | bald), outfit colour (default brand primary), side (left | right). Save to video.config.json → presenter."
+    },
+    "real-presenter": {
+      "header": "Presenter",
+      "question": "Real person or AI avatar?",
+      "note": "Options: 'I'll record myself' (clips in public/presenter/, layout bubble | side | full) or 'AI avatar' (HeyGen / D-ID: needs HEYGEN_API_KEY or DID_API_KEY in ~/.video-studio/secrets.env; generate one clip per line from the script, then place with <TalkingHead>)."
+    },
+    "accent:other": {
+      "header": "Language",
+      "question": "Which language and region?",
+      "note": "List 4–6 matching Azure voices (or ElevenLabs voices), render a 1-line sample of each to out/voice-samples/, and let the user rank them."
+    }
+  },
+  "_agents": "No multiple-choice question tool (e.g. a non-Claude agent, or plain chat)? Ask each round as a numbered list in chat — questions 1-4, options a-d — and accept short answers like \"1b 2a 3c 4a\" (several letters for multi-select, or free text for Other). Without any agent, run `node <skill>/scripts/setup.mjs` for the same questions in the terminal."
 }

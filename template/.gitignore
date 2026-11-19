@@ -4,7 +4,7 @@ dist
 .env
 # renders
 out
-# licensed media (Mixkit etc.): fetched from ~/.video-studio/library, not committed
+# media copied from the shared library (~/.video-studio/library, free open sources): credits live in public/credits.json
 public/stock/*.mp4
 public/audio/music/*.mp3
 public/audio/sfx/*.mp3

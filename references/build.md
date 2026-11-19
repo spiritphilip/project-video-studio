@@ -3,8 +3,8 @@
 ## Anatomy
 ```tsx
 export const EPISODE: EpisodeDef = {
-  track: 'Member', episode: 'Episode 2', title: 'Fund your *wallet*',   // *word* = brand gradient
-  music: 'driving-ambition',            // public/audio/music/<name>.mp3; null = no music
+  track: 'Billing', episode: 'Episode 2', title: 'Pay your *invoice*',   // *word* = brand gradient
+  music: 'upbeat',                      // public/audio/music/<name>.mp3 (upbeat | calm | playful | inspiring | your sound-brief track); null = no music
   coldOpen: {src: 'stock/event.mp4', fromS: 3, toS: 12, cutAtS: 9},   // optional real-footage hit before the intro
   presenter: {position: 'right'},       // optional: animated host in every scene
   scenes: [
@@ -15,7 +15,7 @@ export const EPISODE: EpisodeDef = {
 ```
 Register in `src/episodes/index.ts`: `{id: 'M2-Funding', folder: 'Member', ep: EPISODE, vo: VO, thumb: {...}}`. Composition length is computed from the voice, so never hard-code durations.
 
-**Timing:** `at('bank')` = local frame the line starts; `at('bank', 4)` = when word #4 (0-based) is spoken; `at('bank', 'naira')` = the first word starting with "naira". Put every pop, highlight and sfx on these, usually 2–4 frames *before* the word (`at(...) - 3`).
+**Timing:** `at('bank')` = local frame the line starts; `at('bank', 4)` = when word #4 (0-based) is spoken; `at('bank', 'invoice')` = the first word starting with "invoice". Put every pop, highlight and sfx on these, usually 2–4 frames *before* the word (`at(...) - 3`).
 Scene options: `transition` fade | slide | wipe | slide-up · `hold` extra frames · `captions: false` · `noLogo` · `frames` fixed length (no narration) · `duckMusic` (real speech in the scene) · `presenter: false | {...}`.
 
 ## Kit (src/kit)
@@ -28,7 +28,7 @@ Scene options: `transition` fade | slide | wipe | slide-up · `hold` extra frame
 | `presenter`: `Presenter` | animated host, lip-synced to `speech` |
 | `bumpers`: `BrandIntro`, `BrandOutro` | locked brand intro/outro |
 
-Sound effects (public/audio/sfx): pop-click, pop-bubble, pop-explainer, whoosh-air, whoosh-fast, sparkle, success, coin-win, coins-clink, unlock, message, riser-short, riser-synth, quick-zoom, tile-hit, intro-impact, logo-impact. Keep volume 0.25–0.45.
+Sound effects (public/audio/sfx): pop-click, pop-bubble, pop-explainer, whoosh-air, whoosh-fast, sparkle, success, coin-win, coins-clink, unlock, message, riser-short, riser-synth, quick-zoom, tile-hit, intro-impact, logo-impact. Keep volume 0.25–0.45. Project-specific sounds from the sound brief (`library.mjs sfx "<query>" --name <n> --project <videos>`) are used the same way: `<Sfx src="<n>" …>`. Music: `upbeat`, `calm`, `playful`, `inspiring` from the library, or the project's own sound-brief track.
 
 ## Scene recipes (pick per beat)
 - **Hook:** `StockClip` + `OverlayHeadline` (3–5 words), or a `BigStat`.

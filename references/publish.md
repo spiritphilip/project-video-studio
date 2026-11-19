@@ -7,11 +7,11 @@
 Each registry entry's `thumb` → `npm run thumbs` → `out/thumbs/<Id>.jpg` (1280×720). Pattern: 2–4 word hook (NOT the title) with one *highlight* word, one big 3D object or phone screenshot, a colour per track, the brand logo + "TRACK · EP n" tag.
 
 ## YouTube SEO
-Fill `youtube/seo-source.json` (title ≤ 70 chars, search-shaped: "How to … | Brand"; hook = first 150 chars of the description; points; tags long-tail; chapters from the stills timing), then `npm run seo` → `youtube/seo.json`.
+Fill `youtube/seo-source.json` (title ≤ 70 chars, search-shaped: "How to … | Brand"; hook = first 150 chars of the description; points; tags long-tail; chapters from the stills timing), then `npm run seo` → `youtube/seo.json`. CC BY music/sfx credits from `public/credits.json` are appended to every description automatically; keep them when you publish elsewhere.
 Privacy: public for user-facing tracks, unlisted for staff/admin tracks (ask).
 
 ## Uploading
-- **vidIQ connector (claude.ai):** if it's connected, use it to upload/update titles, descriptions, tags, thumbnails and privacy from `seo.json`. It cannot create playlists, so write `youtube/playlists.md` (name, description, ordered links) for the user to create in Studio.
+- **YouTube connector / MCP (e.g. vidIQ), if your agent has one:** use it to upload/update titles, descriptions, tags, thumbnails and privacy from `seo.json`. It cannot create playlists, so write `youtube/playlists.md` (name, description, ordered links) for the user to create in Studio.
 - **No connector:** the user bulk-uploads the MP4s in YouTube Studio; give them a copy-paste block per video from `seo.json`, plus the thumbnail and `.srt`.
 - **YouTube Data API:** uploads from unverified API projects are locked to private. Use it for metadata only after the user uploads.
 Record the ids in `youtube/youtube-ids.json`.

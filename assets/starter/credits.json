@@ -1,0 +1,203 @@
+{
+  "sfx/pop-click.mp3": {
+    "title": "Click Pop - two part",
+    "creator": "GameAudio",
+    "license": "cc0",
+    "licenseVersion": "1.0",
+    "licenseUrl": "https://creativecommons.org/publicdomain/zero/1.0/",
+    "source": "Openverse/freesound",
+    "landing": "https://freesound.org/people/GameAudio/sounds/220208",
+    "query": "click pop",
+    "attribution": "\"Click Pop - two part\" by GameAudio (CC0) https://freesound.org/people/GameAudio/sounds/220208"
+  },
+  "sfx/pop-bubble.mp3": {
+    "title": "Bubble Pop",
+    "creator": "Mafon2",
+    "license": "cc0",
+    "licenseVersion": "1.0",
+    "licenseUrl": "https://creativecommons.org/publicdomain/zero/1.0/",
+    "source": "Openverse/freesound",
+    "landing": "https://freesound.org/people/Mafon2/sounds/253956",
+    "query": "bubble pop",
+    "attribution": "\"Bubble Pop\" by Mafon2 (CC0) https://freesound.org/people/Mafon2/sounds/253956"
+  },
+  "sfx/whoosh-air.mp3": {
+    "title": "digital_whoosh_soft.wav",
+    "creator": "ludvique",
+    "license": "cc0",
+    "licenseVersion": "1.0",
+    "licenseUrl": "https://creativecommons.org/publicdomain/zero/1.0/",
+    "source": "Openverse/freesound",
+    "landing": "https://freesound.org/people/ludvique/sounds/71852",
+    "query": "whoosh soft",
+    "attribution": "\"digital_whoosh_soft.wav\" by ludvique (CC0) https://freesound.org/people/ludvique/sounds/71852"
+  },
+  "sfx/whoosh-fast.mp3": {
+    "title": "swosh-08.flac - 'stick cutting air'",
+    "creator": "qubodup",
+    "license": "cc0",
+    "licenseVersion": "1.0",
+    "licenseUrl": "https://creativecommons.org/publicdomain/zero/1.0/",
+    "source": "Openverse/freesound",
+    "landing": "https://freesound.org/people/qubodup/sounds/59995",
+    "query": "swoosh fast",
+    "attribution": "\"swosh-08.flac - 'stick cutting air'\" by qubodup (CC0) https://freesound.org/people/qubodup/sounds/59995"
+  },
+  "sfx/sparkle.mp3": {
+    "title": "Sparkling Star 01.wav",
+    "creator": "MATRIXXX_",
+    "license": "cc0",
+    "licenseVersion": "1.0",
+    "licenseUrl": "https://creativecommons.org/publicdomain/zero/1.0/",
+    "source": "Openverse/freesound",
+    "landing": "https://freesound.org/people/MATRIXXX_/sounds/462095",
+    "query": "sparkle",
+    "attribution": "\"Sparkling Star 01.wav\" by MATRIXXX_ (CC0) https://freesound.org/people/MATRIXXX_/sounds/462095"
+  },
+  "sfx/success.mp3": {
+    "title": "[UI Sound] Approval - High Pitched Bell Synth",
+    "creator": "GabFitzgerald",
+    "license": "cc0",
+    "licenseVersion": "1.0",
+    "licenseUrl": "https://creativecommons.org/publicdomain/zero/1.0/",
+    "source": "Openverse/freesound",
+    "landing": "https://freesound.org/people/GabFitzgerald/sounds/625174",
+    "query": "success notification",
+    "attribution": "\"[UI Sound] Approval - High Pitched Bell Synth\" by GabFitzgerald (CC0) https://freesound.org/people/GabFitzgerald/sounds/625174"
+  },
+  "sfx/coin-win.mp3": {
+    "title": "8Bit Coin Collection #2",
+    "creator": "Duskbreaker",
+    "license": "cc0",
+    "licenseVersion": "1.0",
+    "licenseUrl": "https://creativecommons.org/publicdomain/zero/1.0/",
+    "source": "Openverse/freesound",
+    "landing": "https://freesound.org/people/Duskbreaker/sounds/649726",
+    "query": "coin collect",
+    "attribution": "\"8Bit Coin Collection #2\" by Duskbreaker (CC0) https://freesound.org/people/Duskbreaker/sounds/649726"
+  },
+  "sfx/coins-clink.mp3": {
+    "title": "coindrop1.wav",
+    "creator": "jmaimarc",
+    "license": "cc0",
+    "licenseVersion": "1.0",
+    "licenseUrl": "https://creativecommons.org/publicdomain/zero/1.0/",
+    "source": "Openverse/freesound",
+    "landing": "https://freesound.org/people/jmaimarc/sounds/19778",
+    "query": "coins clink",
+    "attribution": "\"coindrop1.wav\" by jmaimarc (CC0) https://freesound.org/people/jmaimarc/sounds/19778"
+  },
+  "sfx/unlock.mp3": {
+    "title": "Satisfying Plastic Handle Unlock",
+    "creator": "LordForklift",
+    "license": "cc0",
+    "licenseVersion": "1.0",
+    "licenseUrl": "https://creativecommons.org/publicdomain/zero/1.0/",
+    "source": "Openverse/freesound",
+    "landing": "https://freesound.org/people/LordForklift/sounds/448393",
+    "query": "unlock",
+    "attribution": "\"Satisfying Plastic Handle Unlock\" by LordForklift (CC0) https://freesound.org/people/LordForklift/sounds/448393"
+  },
+  "sfx/message.mp3": {
+    "title": "Chime Notification",
+    "creator": "Jofae",
+    "license": "cc0",
+    "licenseVersion": "1.0",
+    "licenseUrl": "https://creativecommons.org/publicdomain/zero/1.0/",
+    "source": "Openverse/freesound",
+    "landing": "https://freesound.org/people/Jofae/sounds/380482",
+    "query": "message notification",
+    "attribution": "\"Chime Notification\" by Jofae (CC0) https://freesound.org/people/Jofae/sounds/380482"
+  },
+  "sfx/riser-short.mp3": {
+    "title": "Riser",
+    "creator": "Rizzard",
+    "license": "cc0",
+    "licenseVersion": "1.0",
+    "licenseUrl": "https://creativecommons.org/publicdomain/zero/1.0/",
+    "source": "Openverse/freesound",
+    "landing": "https://freesound.org/people/Rizzard/sounds/561207",
+    "query": "riser",
+    "attribution": "\"Riser\" by Rizzard (CC0) https://freesound.org/people/Rizzard/sounds/561207"
+  },
+  "sfx/riser-synth.mp3": {
+    "title": "chiptune_style_riser_fx_110bpm.wav",
+    "creator": "fawkes027",
+    "license": "cc0",
+    "licenseVersion": "1.0",
+    "licenseUrl": "https://creativecommons.org/publicdomain/zero/1.0/",
+    "source": "Openverse/freesound",
+    "landing": "https://freesound.org/people/fawkes027/sounds/176046",
+    "query": "synth riser",
+    "attribution": "\"chiptune_style_riser_fx_110bpm.wav\" by fawkes027 (CC0) https://freesound.org/people/fawkes027/sounds/176046"
+  },
+  "sfx/quick-zoom.mp3": {
+    "title": "Swosh swoosh whoosh air sound, free, high quality",
+    "creator": "qubodup",
+    "license": "cc0",
+    "licenseVersion": "1.0",
+    "licenseUrl": "https://creativecommons.org/publicdomain/zero/1.0/",
+    "source": "Openverse/freesound",
+    "landing": "https://freesound.org/people/qubodup/sounds/60026",
+    "query": "zoom swoosh",
+    "attribution": "\"Swosh swoosh whoosh air sound, free, high quality\" by qubodup (CC0) https://freesound.org/people/qubodup/sounds/60026"
+  },
+  "sfx/tile-hit.mp3": {
+    "title": "wood hit",
+    "creator": "Ian_G",
+    "license": "cc0",
+    "licenseVersion": "1.0",
+    "licenseUrl": "https://creativecommons.org/publicdomain/zero/1.0/",
+    "source": "Openverse/freesound",
+    "landing": "https://freesound.org/people/Ian_G/sounds/547414",
+    "query": "wood hit",
+    "attribution": "\"wood hit\" by Ian_G (CC0) https://freesound.org/people/Ian_G/sounds/547414"
+  },
+  "sfx/intro-impact.mp3": {
+    "title": "Impact",
+    "creator": "chriskalos",
+    "license": "cc0",
+    "licenseVersion": "1.0",
+    "licenseUrl": "https://creativecommons.org/publicdomain/zero/1.0/",
+    "source": "Openverse/freesound",
+    "landing": "https://freesound.org/people/chriskalos/sounds/172779",
+    "query": "impact boom",
+    "attribution": "\"Impact\" by chriskalos (CC0) https://freesound.org/people/chriskalos/sounds/172779"
+  },
+  "music/upbeat.mp3": {
+    "url": "https://prod-1.storage.jamendo.com/?trackid=1670486&format=mp32",
+    "title": "Upbeat Corporate",
+    "creator": "Soundrider/Dope",
+    "license": "by",
+    "licenseVersion": "3.0",
+    "licenseUrl": "https://creativecommons.org/licenses/by/4.0/",
+    "source": "Openverse/jamendo",
+    "landing": "https://www.jamendo.com/track/1670486",
+    "query": "upbeat corporate",
+    "attribution": "\"Upbeat Corporate\" by Soundrider/Dope (CC BY 3.0) https://www.jamendo.com/track/1670486"
+  },
+  "sfx/pop-explainer.mp3": {
+    "url": "https://cdn.freesound.org/previews/333/333428_4682121-hq.mp3",
+    "title": "UI Series: Hollow pop",
+    "creator": "brandondelehoy",
+    "license": "cc0",
+    "licenseVersion": "1.0",
+    "licenseUrl": "https://creativecommons.org/publicdomain/zero/1.0/",
+    "source": "Openverse/freesound",
+    "landing": "https://freesound.org/people/brandondelehoy/sounds/333428",
+    "query": "pop interface",
+    "attribution": "\"UI Series: Hollow pop\" by brandondelehoy (CC0) https://freesound.org/people/brandondelehoy/sounds/333428"
+  },
+  "sfx/logo-impact.mp3": {
+    "url": "https://cdn.freesound.org/previews/535/535592_9015615-hq.mp3",
+    "title": "BOOM IMPACT 2",
+    "creator": "XHALE303",
+    "license": "cc0",
+    "licenseVersion": "1.0",
+    "licenseUrl": "https://creativecommons.org/publicdomain/zero/1.0/",
+    "source": "Openverse/freesound",
+    "landing": "https://freesound.org/people/XHALE303/sounds/535592",
+    "query": "impact",
+    "attribution": "\"BOOM IMPACT 2\" by XHALE303 (CC0) https://freesound.org/people/XHALE303/sounds/535592"
+  }
+}

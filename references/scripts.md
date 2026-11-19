@@ -16,14 +16,14 @@ About 140–160 spoken words per minute at +10% rate. Keep sentences under ~18 w
 
 ## File format: `scripts/videos/<id>.json`
 ```json
-{"id": "m2-funding", "title": "Member · Funding your wallet", "for": "Members",
+{"id": "b2-pay-invoice", "title": "Billing · Paying an invoice", "for": "Account admins",
  "lines": [
-  {"id": "hook", "voice": "narrator", "text": "Your membership is paid in USDC. Here are three easy ways to add it."},
-  {"id": "bank", "voice": "narrator", "text": "First, *bank transfer*. [pause 250] Pay in naira, and USDC arrives on its own."},
+  {"id": "hook", "voice": "narrator", "text": "Got an invoice? Here are three easy ways to pay it."},
+  {"id": "bank", "voice": "narrator", "text": "First, *card*. [pause 250] Pay in your own currency, and the invoice closes on its own."},
   {"id": "buyer", "voice": "second", "text": "Hello! I've sent the money.", "rate": "+4%"}
  ]}
 ```
-- Line ids are what scenes use (`at('bank', 'naira')`), so keep them short and stable.
+- Line ids are what scenes use (`at('bank', 'invoice')`), so keep them short and stable.
 - One line ≈ one scene beat; a long paragraph makes timing coarse.
 - Optional per-line `rate` / `pitch` overrides.
 

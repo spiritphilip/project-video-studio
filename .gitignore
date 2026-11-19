@@ -7,3 +7,6 @@ template/out
 template/public/vo
 template/public/stock/*.mp4
 template/public/audio/**/*.mp3
+.remotion
+__pycache__/
+*.pyc

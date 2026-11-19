@@ -1,7 +1,7 @@
 {
   "_note": "Written by the first-run setup questionnaire. Edit freely, then run `npm run brand` to regenerate src/brand.ts.",
   "skillVersion": "1.0.0",
-  "questionsVersion": 1,
+  "questionsVersion": 2,
   "project": {
     "name": "My Project",
     "summary": "One sentence: what the product does and for whom.",
@@ -12,7 +12,11 @@
     "name": "My Project",
     "wordmark": "MYPROJECT",
     "tagline": "What the product promises, in one line.",
-    "pillars": ["Feature one", "Feature two", "Feature three"],
+    "pillars": [
+      "Feature one",
+      "Feature two",
+      "Feature three"
+    ],
     "poweredBy": null,
     "logo": "brand/logo.png",
     "mark": null,
@@ -31,9 +35,28 @@
       "highlight": "#facc15"
     },
     "fonts": {
-      "head": {"family": "Unbounded", "weights": ["600", "800"]},
-      "display": {"family": "Space Grotesk", "weights": ["500", "700"]},
-      "body": {"family": "Outfit", "weights": ["400", "500", "600"]}
+      "head": {
+        "family": "Unbounded",
+        "weights": [
+          "600",
+          "800"
+        ]
+      },
+      "display": {
+        "family": "Space Grotesk",
+        "weights": [
+          "500",
+          "700"
+        ]
+      },
+      "body": {
+        "family": "Outfit",
+        "weights": [
+          "400",
+          "500",
+          "600"
+        ]
+      }
     }
   },
   "answers": {
@@ -42,17 +65,32 @@
     "format": "16:9",
     "length": "60-90s",
     "style": "motion-explainer",
-    "visuals": ["app-screens", "icons-motion", "stock-footage"],
+    "visuals": [
+      "app-screens",
+      "icons-motion",
+      "stock-footage"
+    ],
     "captions": "word-highlight",
     "energy": "energetic",
-    "voiceProvider": "azure",
+    "voiceProvider": "edge",
     "accent": "en-US",
     "cast": "per-track",
     "tone": "formal-simple",
-    "destinations": ["youtube"],
+    "destinations": [
+      "youtube"
+    ],
     "bumpers": "intro-outro",
     "music": "upbeat",
     "approval": "script-each"
+  },
+  "soundBrief": {
+    "_note": "Filled by the agent after reading the project: what this product should SOUND like. Drives the music/sfx it fetches (library.mjs --project).",
+    "mood": "",
+    "genre": "",
+    "tempo": "",
+    "sfxCharacter": "",
+    "musicQueries": [],
+    "sfxNotes": ""
   },
   "presenter": {
     "type": "character",
@@ -63,18 +101,43 @@
     "position": "right"
   },
   "voices": {
-    "narrator": {"provider": "azure", "name": "en-US-AndrewMultilingualNeural", "lang": "en-US", "rate": "+8%", "pitch": "+3%"},
-    "second": {"provider": "azure", "name": "en-US-AvaMultilingualNeural", "lang": "en-US", "rate": "+8%", "pitch": "+4%"}
+    "narrator": {
+      "provider": "edge",
+      "name": "en-US-AndrewMultilingualNeural",
+      "lang": "en-US",
+      "rate": "+8%",
+      "pitch": "+3%"
+    },
+    "second": {
+      "provider": "edge",
+      "name": "en-US-AvaMultilingualNeural",
+      "lang": "en-US",
+      "rate": "+8%",
+      "pitch": "+4%"
+    }
   },
   "tracks": {
-    "start": {"name": "Start here", "narrator": "narrator", "color": "#6366f1"}
+    "start": {
+      "name": "Start here",
+      "narrator": "narrator",
+      "color": "#6366f1"
+    }
   },
-  "music": {"default": "driving-ambition", "volume": 0.085},
+  "music": {
+    "default": "upbeat",
+    "volume": 0.085
+  },
   "publish": {
     "site": "https://example.com",
     "seriesName": "My Project Academy",
-    "baseTags": ["My Project", "tutorial"],
-    "hashtags": ["#MyProject"],
+    "baseTags": [
+      "My Project",
+      "tutorial"
+    ],
+    "hashtags": [
+      "#MyProject"
+    ],
     "trackLinks": {}
-  }
+  },
+  "lockedFiles": []
 }

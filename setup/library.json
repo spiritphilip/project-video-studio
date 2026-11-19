@@ -1,0 +1,43 @@
+{
+  "_how": "What `scripts/library.mjs` downloads into ~/.video-studio/library. Each entry = one file the kit refers to by name. `queries` are tried in order; the first result that fits the duration window (seconds) and an allowed license wins. Add entries freely: the kit plays any file by name (<Sfx src=\"name\">, music: \"name\", stock/<name>.mp4).",
+  "sfx": {
+    "licenses": ["cc0", "pdm"],
+    "items": {
+      "pop-click":     {"queries": ["click pop", "ui click", "mouse click"], "max": 1.0},
+      "pop-bubble":    {"queries": ["bubble pop", "pop"], "max": 1.0},
+      "pop-explainer": {"queries": ["pop interface", "ui pop", "pop"], "max": 1.2},
+      "whoosh-air":    {"queries": ["whoosh soft", "air whoosh", "whoosh"], "max": 2.0},
+      "whoosh-fast":   {"queries": ["swoosh fast", "swipe whoosh", "swoosh"], "max": 1.2},
+      "sparkle":       {"queries": ["sparkle", "magic chime", "shimmer"], "max": 3.0},
+      "success":       {"queries": ["success notification", "success chime", "positive notification"], "max": 2.5},
+      "coin-win":      {"queries": ["coin collect", "coin pickup", "coin"], "max": 2.0},
+      "coins-clink":   {"queries": ["coins clink", "coins drop", "coins"], "max": 2.5},
+      "unlock":        {"queries": ["unlock", "lock open", "padlock"], "max": 2.0},
+      "message":       {"queries": ["message notification", "notification ping", "notification"], "max": 2.0},
+      "riser-short":   {"queries": ["riser", "rise sweep", "uplifter"], "min": 0.8, "max": 4.0},
+      "riser-synth":   {"queries": ["synth riser", "riser", "sweep up"], "min": 1.5, "max": 6.0},
+      "quick-zoom":    {"queries": ["zoom swoosh", "quick swoosh", "swish"], "max": 1.5},
+      "tile-hit":      {"queries": ["wood hit", "thud", "knock"], "max": 1.0},
+      "intro-impact":  {"queries": ["cinematic impact", "impact boom", "hit impact"], "max": 3.5},
+      "logo-impact":   {"queries": ["logo hit", "impact", "boom"], "max": 3.5}
+    }
+  },
+  "music": {
+    "licenses": ["cc0", "pdm", "by"],
+    "items": {
+      "upbeat":    {"queries": ["upbeat corporate", "upbeat positive", "energetic pop instrumental"], "min": 60, "max": 320},
+      "calm":      {"queries": ["calm ambient", "soft piano background", "ambient background"], "min": 60, "max": 320},
+      "playful":   {"queries": ["playful ukulele", "happy whistle", "fun upbeat"], "min": 60, "max": 320},
+      "inspiring": {"queries": ["inspiring cinematic", "motivational background", "inspiring"], "min": 60, "max": 320}
+    }
+  },
+  "stock": {
+    "_note": "Needs a free PEXELS_API_KEY or PIXABAY_API_KEY. Without one, stock is skipped (the kit works without it).",
+    "items": {
+      "typing-phone":  {"queries": ["typing on phone", "hands smartphone"]},
+      "laptop-work":   {"queries": ["working on laptop", "person laptop desk"]},
+      "team-meeting":  {"queries": ["team meeting office", "people collaborating"]},
+      "city-timelapse": {"queries": ["city timelapse", "city night"]}
+    }
+  }
+}

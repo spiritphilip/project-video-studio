@@ -1,9 +1,11 @@
 // Voiceover generator: script JSON → one MP3 per line + word timings (drive captions and animation beats).
 // Usage: node scripts/tts.mjs scripts/videos/<id>.json [--force]
 // Voices come from video.config.json → "voices" (each line names one by key). Providers:
+//   edge        FREE, no key: Microsoft Edge neural voices via the open-source Python package edge-tts
+//               (python -m pip install --user edge-tts). Same voice names as Azure. Unofficial endpoint.
 //   azure       Azure Speech neural voices (free F0 tier is enough). Secrets: AZURE_SPEECH_KEY, AZURE_SPEECH_REGION
 //   elevenlabs  ElevenLabs (paid, most natural). Secret: ELEVENLABS_API_KEY. Voice needs "voiceId".
-//   recorded    Your own recording: put public/vo/<id>/<line>.mp3 yourself + run with --words-from=<transcript json> (see references/05-voice.md)
+//   recorded    Your own recording: put public/vo/<id>/<line>.mp3 yourself + run with --words-from=<transcript json> (see references/voice.md)
 // Script text supports [pause 300] and *emphasis* markers.
 // Output: public/vo/<id>/<line>.mp3 and src/episodes/<id>/vo.json (cached per line: only changed lines are re-voiced).
 import fs from 'node:fs';
@@ -26,6 +28,32 @@ const previous = fs.existsSync(outJson) ? JSON.parse(fs.readFileSync(outJson, 'u
 
 const esc = (s) => s.replace(/&/g, '&amp;').replace(/</g, '&lt;').replace(/>/g, '&gt;');
 const plain = (s) => s.replace(/\[pause \d+\]/g, ' ').replace(/\*/g, '').replace(/\s+/g, ' ').trim();
+
+// ---------- edge (free) ----------
+const PY = process.env.PYTHON || (process.platform === 'win32' ? 'python' : 'python3');
+async function edge(line, v) {
+  const {spawnSync} = await import('node:child_process');
+  const file = path.join(audioDir, `${line.id}.mp3`);
+  // edge-tts takes plain text: pauses become a comma break, emphasis markers are dropped
+  const text = line.text.replace(/\[pause \d+\]/g, ', ').replace(/\*/g, '');
+  const pct = (x, d) => String(x ?? d);
+  const rate = pct(line.rate ?? v.rate, '+0%');
+  // config pitch is in % (Azure style); edge-tts wants Hz: about 2 Hz per %
+  const p = String(line.pitch ?? v.pitch ?? '+0%');
+  const pitch = /Hz$/.test(p) ? p : `${parseFloat(p) >= 0 ? '+' : ''}${Math.round(parseFloat(p) * 2)}Hz`;
+  let r;
+  for (let attempt = 1; attempt <= 3; attempt++) {
+    r = spawnSync(PY, ['-P', path.join(root, 'scripts', 'edge_tts.py'), v.name, rate, pitch, file], {input: text, encoding: 'utf8', timeout: 120000});
+    if (r.status === 0) break;
+    Atomics.wait(new Int32Array(new SharedArrayBuffer(4)), 0, 0, 2000 * attempt); // back off on network blips
+  }
+  if (r.error?.code === 'ENOENT') throw new Error(`Python not found. Install Python 3 (python.org), then: ${PY} -m pip install --user edge-tts (or set PYTHON=path)`);
+  if (r.status !== 0) throw new Error(`edge-tts failed: ${(r.stderr || '').split('\n').filter(Boolean).slice(-2).join(' ')}${/No module named/.test(r.stderr) ? ` → ${PY} -m pip install --user edge-tts` : ''}`);
+  const {words} = JSON.parse(r.stdout.trim().split('\n').pop());
+  // edge streams 24 kHz 48 kbit/s CBR mp3, so length = bytes × 8 / 48000
+  const durationMs = Math.round((fs.statSync(file).size * 8) / 48);
+  return {audio: null, durationMs, words};
+}
 
 // ---------- Azure ----------
 async function azure(line, v) {
@@ -91,14 +119,14 @@ async function recorded(line) {
   return {audio: null, durationMs: line.durationMs ?? line.words.at(-1).endMs + 150, words: line.words};
 }
 
-const PROVIDERS = {azure, elevenlabs, recorded};
+const PROVIDERS = {edge, azure, elevenlabs, recorded};
 
 const result = {};
 for (const line of script.lines) {
   const v = cast[line.voice];
   if (!v) throw new Error(`Unknown voice "${line.voice}" (see "voices" in video.config.json)`);
-  const provider = PROVIDERS[v.provider ?? 'azure'];
-  if (!provider) throw new Error(`Unknown provider "${v.provider}" (azure | elevenlabs | recorded)`);
+  const provider = PROVIDERS[v.provider ?? 'edge'];
+  if (!provider) throw new Error(`Unknown provider "${v.provider}" (edge | azure | elevenlabs | recorded)`);
   const file = path.join(audioDir, `${line.id}.mp3`);
   const key = JSON.stringify([v.provider, v.name ?? v.voiceId, line.voice, line.text, line.rate, line.pitch, v.rate, v.pitch]);
   if (!force && previous[line.id]?.key === key && fs.existsSync(file)) { result[line.id] = previous[line.id]; console.log('cached', line.id); continue; }

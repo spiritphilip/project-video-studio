@@ -3,7 +3,7 @@
 Chosen in setup (`answers.style`). Mix freely inside an episode; the style is the default look.
 
 ## motion-explainer (default)
-Animated concept scenes (3D icons, kinetic headlines, cards, counters) + real screens in `Browser`/`Phone` frames + stock footage for hooks. Voice-over with word-highlight captions. Reference: the TechXcellence education series.
+Animated concept scenes (3D icons, kinetic headlines, cards, counters) + real screens in `Browser`/`Phone` frames + stock footage for hooks. Voice-over with word-highlight captions. Proven on a 27-video education series.
 
 ## screen-tour
 For "how do I…" tutorials. Mostly real captured screens: `ZoomShot` eases into the area being talked about, `Cursor` moves and clicks on the word, `Spotlight` dims the rest with the UI label. Brief motion scenes only for hook and close. Capture at desktop 1920×1080; use the screenshot's pixel coordinates (open the PNG and read them).

@@ -4,9 +4,9 @@
 // Files listed in video.config.json → "lockedFiles" (e.g. a customised src/kit/bumpers.tsx) are never replaced.
 import fs from 'node:fs';
 import path from 'node:path';
+import {fileURLToPath} from 'node:url';
 
-const here = path.dirname(new URL(import.meta.url).pathname.replace(/^\/([A-Za-z]:)/, '$1'));
-const skill = path.resolve(here, '..');
+const skill = path.resolve(path.dirname(fileURLToPath(import.meta.url)), '..');
 const arg = (k, d) => { const i = process.argv.indexOf(`--${k}`); return i > 0 ? process.argv[i + 1] : d; };
 const dir = path.resolve(arg('dir', 'videos'));
 const dry = process.argv.includes('--dry');
@@ -18,7 +18,7 @@ const version = fs.readFileSync(path.join(skill, 'VERSION'), 'utf8').trim();
 
 // what the kit owns (safe to upgrade)
 const KIT = ['src/kit', 'src/thumbs/Thumbnail.tsx', 'src/Root.tsx', 'src/index.ts', 'scripts/brand.mjs', 'scripts/lib.mjs', 'scripts/tts.mjs', 'scripts/capture.mjs',
-  'scripts/stills.mjs', 'scripts/render.mjs', 'scripts/thumbs.mjs', 'scripts/seo.mjs', 'remotion.config.ts', 'tsconfig.json', 'public/icons'];
+  'scripts/stills.mjs', 'scripts/render.mjs', 'scripts/thumbs.mjs', 'scripts/seo.mjs', 'scripts/fonts.mjs', 'scripts/edge_tts.py', 'remotion.config.ts', 'tsconfig.json', 'public/icons'];
 const files = [];
 const walk = (rel) => {
   const abs = path.join(skill, 'template', rel);

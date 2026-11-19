@@ -3,11 +3,17 @@
 // Every animation beat is placed with at(lineId, word) so it lands on the narration.
 import React from 'react';
 import {AbsoluteFill} from 'remotion';
-import {At, Backdrop, Camera, Kinetic, useStage} from '../../kit';
+import {At, Backdrop, Camera, Icon3D, Kinetic, useStage} from '../../kit';
 import type {EpisodeDef} from '../../kit/episode';
-import {OverlayHeadline, Sfx, StockClip} from '../../kit/media';
+import {OverlayHeadline, Sfx} from '../../kit/media';
 import {Cursor, Spotlight, ZoomShot} from '../../kit/tour';
 import {Browser, Checklist, PopPill, StepCard} from '../../kit/visuals';
+
+/** A big 3D rocket centred above the headline. */
+const Hero: React.FC<{at: number}> = ({at}) => {
+  const {cx, cy, u} = useStage();
+  return <Icon3D name="rocket" x={cx} y={cy - 250 * u} size={260 * u} delay={at} />;
+};
 
 const Steps: React.FC<{w: (n: number) => number}> = ({w}) => {
   const {cx, vertical} = useStage();
@@ -36,8 +42,11 @@ export const EPISODE: EpisodeDef = {
     {
       name: 'Hook', lines: ['hook'],
       render: ({at}) => (
+        // No stock footage needed. With a clip in public/stock, swap <Backdrop/> for:
+        // <StockClip src="stock/typing-phone.mp4" grade="dark" zoom={[1.0, 1.08]} />
         <AbsoluteFill>
-          <StockClip src="stock/typing-phone.mp4" grade="dark" zoom={[1.0, 1.08]} />
+          <Backdrop />
+          <Hero at={at('hook', 1)} />
           <OverlayHeadline text="Get started in *one* *minute*" at={at('hook', 4) - 4} size={100} />
           <Sfx src="pop-explainer" at={at('hook', 4)} volume={0.35} />
         </AbsoluteFill>
