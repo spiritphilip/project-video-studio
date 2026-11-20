@@ -2,6 +2,14 @@
 
 **Turn any software project into a series of polished tutorial and explainer videos, made by your coding agent.**
 
+🌐 **Website:** [videostudioproject.vercel.app](https://videostudioproject.vercel.app)
+
+## Demo
+[![Watch the demo video (2:23), made with Project Video Studio](docs/images/demo.jpg)](https://videostudioproject.vercel.app/launch-720.mp4)
+
+This launch video was made with Project Video Studio itself. ▶ [Watch it on the website](https://videostudioproject.vercel.app) · ⬇ Download in 1080p: [landscape 16:9](https://github.com/spiritphilip/project-video-studio/releases/download/v2.0.1/project-video-studio-demo-16x9.mp4) · [vertical 9:16](https://github.com/spiritphilip/project-video-studio/releases/download/v2.0.1/project-video-studio-demo-9x16.mp4)
+
+## What it does
 Point your AI coding agent (Claude Code, Codex CLI, Gemini CLI, Cursor, Cline, OpenCode, Aider…) at a project and ask for videos. It reads the codebase to understand the product, its users, its brand (logo, colours, fonts) and the kind of music that fits. Then it asks you a few setup questions, plans the series and writes fact-checked scripts. From there it captures real app screens, generates natural voice-over with word-timed captions, builds the videos in [Remotion](https://www.remotion.dev), renders them, and prepares thumbnails and YouTube SEO. Everything works **for free** by default. It was battle-tested producing a 27-video education series.
 
 <p>
