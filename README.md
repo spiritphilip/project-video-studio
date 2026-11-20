@@ -158,5 +158,7 @@ This kit uses Remotion, which is **free for individuals and companies of up to 3
 ## Contributing
 New styles, voice providers, media sources and setup questions are welcome. See [CONTRIBUTING.md](CONTRIBUTING.md).
 
+**Made videos with it?** [Share your story](https://github.com/spiritphilip/project-video-studio/issues/new?template=share-your-story.yml). Featured stories appear on the [website](https://videostudioproject.vercel.app/#community).
+
 ## License
 [MIT](LICENSE) © 2026 spiritphilip and contributors.

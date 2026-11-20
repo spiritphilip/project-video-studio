@@ -1,0 +1,49 @@
+name: Share your story
+description: Made videos with Project Video Studio? Tell us how it went. Featured stories appear on the website.
+title: "Story: "
+labels: ["story"]
+body:
+  - type: markdown
+    attributes:
+      value: |
+        Thanks for using Project Video Studio! Stories help other developers decide to try it.
+        The maintainer may feature yours on the website (with your GitHub avatar and the details below).
+  - type: input
+    id: name
+    attributes:
+      label: Your name
+      description: As you'd like it shown.
+    validations:
+      required: true
+  - type: input
+    id: role
+    attributes:
+      label: Role or company
+      placeholder: e.g. Indie hacker, Founder at Acme, Developer advocate
+  - type: input
+    id: made
+    attributes:
+      label: What did you make with it?
+      placeholder: e.g. 8 onboarding tutorials for our SaaS, a launch video, YouTube Shorts
+    validations:
+      required: true
+  - type: textarea
+    id: quote
+    attributes:
+      label: Your words
+      description: A few sentences about your experience (this is the quote shown on the website).
+    validations:
+      required: true
+  - type: input
+    id: link
+    attributes:
+      label: Link (optional)
+      description: Your project, the video, or your site.
+      placeholder: https://
+  - type: checkboxes
+    id: consent
+    attributes:
+      label: Consent
+      options:
+        - label: I agree that this story, my name and my GitHub avatar may be shown on the Project Video Studio website.
+          required: true
