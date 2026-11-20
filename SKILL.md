@@ -73,6 +73,7 @@ Rules: one focal point per scene, something always moving, every beat lands on a
 ## Hard-won rules
 Read [references/lessons.md](references/lessons.md) once per project. The top ones:
 - Screens must match the narration; never fill with the landing page.
+- Portrait (9:16) videos use screens captured in **mobile view** (390×844), never a shrunk desktop page.
 - Show the product as fully working; videos live for years.
 - Music and effects must fit the product (use the sound brief), at low volume, ducked under speech.
 - Mix real screens and footage with animation; an all-animated slideshow feels dull.

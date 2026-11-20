@@ -15,3 +15,4 @@
 13. **Lock the brand bumpers** once approved; only the intro props change per video.
 14. **Approve before building:** list, then scripts, then a stills check, then render. Re-renders are the expensive part.
 15. **Quote the time.** Tell the user the estimated render time for a batch (from `doctor --bench`) before starting.
+16. **Portrait means mobile view.** A 9:16 video shows the app the way a phone user sees it: capture the mobile layout (390×844 @2x) and show it full-height or in `<Phone>`. A desktop page scaled down into a portrait frame is unreadable and was rejected. For `format: both`, capture every beat twice (desktop for 16:9, mobile for 9:16) and pick the screenshot per format with `useStage().vertical`. Desktop-only tools (an IDE, an admin panel with no mobile layout) get zoomed crops of the part being talked about, not the whole window shrunk.

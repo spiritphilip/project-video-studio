@@ -19,7 +19,7 @@ Set `presenter: {}` on the EpisodeDef (or per scene). The host stands on the sid
 Text-led: `Kinetic` headlines carry the message beat by beat on music; use scene `frames` for fixed lengths. Best for Shorts and ads.
 
 ## Vertical / Shorts (format 9:16 or both)
-Everything centred and stacked; text bigger; captions sit higher (handled by the kit). With `format: both`, each episode also gets `<Id>-Vertical`. Check its stills separately, and for Shorts cut a 30–45 s version (hook + the single best beat + CTA).
+Everything centred and stacked; text bigger; captions sit higher (handled by the kit). **Screens come from the mobile captures** (390×844), shown full-height or in `<Phone>`; never scale a desktop screenshot or `<Browser>` down into the portrait frame. Screen-tour zooms in vertical use the mobile screenshot too (`ZoomShot shot={[780, 1688]}` for a 2x capture). With `format: both`, each episode also gets `<Id>-Vertical`. Check its stills separately, and for Shorts cut a 30–45 s version (hook + the single best beat + CTA).
 
 ## Adding a style
 See extending.md.
